@@ -11,13 +11,27 @@ h3,
 h4,
 h5,
 h6,
+p,
 figure,
 picture {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400; // because of the specifications of font used
+}
+
 body {
   line-height: 1.5;
+}
+body,
+#__next {
   min-height: 100vh;
 }
 
