@@ -1,3 +1,5 @@
+// GENERAL
+
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
@@ -10,7 +12,7 @@
 
 .container {
   width: 100%;
-  min-width: 80rem; // i.e. 1280px
+  max-width: 80rem; // i.e. 1280px
   padding-inline: 2rem;
   margin-inline: auto;
 }
@@ -25,4 +27,29 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
+}
+
+// COLORS
+.bg-dark {
+  background-color: hsl(var(--clr-dark));
+}
+
+.bg-accent {
+  background-color: hsl(var(--clr-accent));
+}
+
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+
+.text-dark {
+  color: hsl(var(--clr-dark));
+}
+
+.text-accent {
+  color: hsl(var(--clr-accent));
+}
+
+.text-white {
+  color: hsl(var(--clr-white));
 }
