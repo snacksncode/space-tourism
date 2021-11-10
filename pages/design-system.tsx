@@ -90,7 +90,7 @@ const DesignSystem: NextPage = () => {
           </div>
         </section>
 
-        <section className="flow" id="typography" style={{ margin: "4rem 0" }}>
+        <section className="flow" id="typography" style={{ marginBottom: "6rem" }}>
           <h2 className="numbered-title">
             <span>02</span> Typography
           </h2>
