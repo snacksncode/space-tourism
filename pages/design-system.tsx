@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/DesignSystem.module.scss";
+import Heading from "@/components/Heading";
 
 const DesignSystem: NextPage = () => {
   return (
@@ -98,25 +99,23 @@ const DesignSystem: NextPage = () => {
             <div className="flow" style={{ flexBasis: "100%" }}>
               <div>
                 <p className="text-accent">Heading 1 - Bellefair Regular - 150px</p>
-                <p className="fs-900 ff-serif uppercase">Earth</p>
+                <Heading level={1}>Earth</Heading>
               </div>
               <div>
                 <p className="text-accent">Heading 2 - Bellefair Regular - 100px</p>
-                <p className="fs-800 ff-serif uppercase">Venus</p>
+                <Heading level={2}>Venus</Heading>
               </div>
               <div>
                 <p className="text-accent">Heading 3 - Bellefair Regular - 56px</p>
-                <p className="fs-700 ff-serif uppercase">Jupiter & Saturn</p>
+                <Heading level={3}>Jupiter & Saturn</Heading>
               </div>
               <div>
                 <p className="text-accent">Heading 4 - Bellefair Regular - 32px</p>
-                <p className="fs-600 ff-serif uppercase">Uranus, Neptune, & Pluto</p>
+                <Heading level={4}>Uranus, Neptune, & Pluto</Heading>
               </div>
               <div>
                 <p className="text-accent">Heading 5 - Barlow Condensed Regular - 28px - 4.75 Character Space</p>
-                <p className="fs-500 text-accent letter-spacing-lg ff-sans-cond uppercase">
-                  So, you want to travel to space
-                </p>
+                <Heading level={5}>So, you want to travel to space</Heading>
               </div>
             </div>
 
