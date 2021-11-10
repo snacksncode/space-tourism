@@ -1,0 +1,21 @@
+.dot-indicators {
+  & > * {
+    width: 1rem;
+    position: relative;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    background-color: hsl(var(--clr-white) / 0.2);
+    transition: background-color 200ms ease;
+    border-radius: 50%;
+    border: none;
+    &:hover,
+    &[data-hovered],
+    &:focus-visible {
+      background-color: hsl(var(--clr-white) / 0.5);
+    }
+    &[aria-selected="true"] {
+      background-color: hsl(var(--clr-white) / 1) !important;
+      cursor: default !important;
+    }
+  }
+}

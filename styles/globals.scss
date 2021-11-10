@@ -1,11 +1,33 @@
+// generic
 @use "partials/variables";
 @use "partials/reset";
 @use "partials/utils";
 @use "partials/accessibility";
+// components
+@use "components/large-button";
+@use "components/primary-navigation";
+@use "components/underline-indicators";
+@use "components/tab-list";
+@use "components/dot-indicators";
+@use "components/number-indicators";
 
 body {
   font-family: var(--ff-sans-normal);
   font-size: var(--fs-400);
   background-color: hsl(var(--clr-dark));
   color: hsl(var(--clr-white));
+}
+
+*:focus-visible {
+  outline: 2px dashed hsl(var(--clr-accent));
+  outline-offset: 1rem;
+}
+
+.fake-pointer {
+  bottom: -0.5rem;
+  right: -0.5rem;
+  position: absolute;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
 }

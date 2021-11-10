@@ -1,0 +1,16 @@
+.primary-navigation {
+  --gap: 8rem;
+  list-style: none;
+  margin: 0;
+  a {
+    --gap: 0.5rem;
+    padding-block: 1rem;
+    text-decoration: none;
+    & > span {
+      font-weight: 700;
+    }
+  }
+  li {
+    cursor: pointer;
+  }
+}

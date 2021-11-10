@@ -1,0 +1,29 @@
+.underline-indicators {
+  & > * {
+    position: relative;
+    cursor: pointer;
+    padding-block: var(--underline-gap, 1rem);
+    &::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: hsl(var(--clr-white));
+      opacity: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: opacity 200ms ease;
+    }
+    &:hover,
+    &:focus-visible,
+    &[data-hovered] {
+      &::after {
+        opacity: 0.5;
+      }
+    }
+    &.active::after,
+    &[aria-selected="true"]::after {
+      opacity: 1;
+    }
+  }
+}
