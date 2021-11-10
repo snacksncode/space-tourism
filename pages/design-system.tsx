@@ -4,6 +4,8 @@ import Image from "next/image";
 import styles from "@/styles/DesignSystem.module.scss";
 import Heading from "@/components/Heading";
 import Container from "@/components/Container";
+import SubHeading from "@/components/SubHeading";
+import Paragraph from "@/components/Paragraph";
 
 const DesignSystem: NextPage = () => {
   return (
@@ -123,11 +125,11 @@ const DesignSystem: NextPage = () => {
             <div className="flow" style={{ flexBasis: "100%" }}>
               <div>
                 <p className="text-accent">Subheading 1 - Bellefair Regular - 28px</p>
-                <p className="fs-500 ff-serif uppercase">384,400 km</p>
+                <SubHeading level={1}>384,400 km</SubHeading>
               </div>
               <div>
                 <p className="text-accent">Subheading 2 - Barlow Condensed Regular - 14px - 2.35 Character Space</p>
-                <p className="fs-200 ff-sans-cond uppercase letter-spacing-sm">Avg. Distance</p>
+                <SubHeading level={2}>Avg. Distance</SubHeading>
               </div>
               <div>
                 <p className="text-accent">Nav Text - Barlow Condensed Regular - 16px - 2.7 Character Space</p>
@@ -135,7 +137,7 @@ const DesignSystem: NextPage = () => {
               </div>
               <div>
                 <p style={{ color: "hsl(var(--clr-white) / 50%)" }}>Body Text</p>
-                <p>
+                <Paragraph color="white">
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet
                   nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula
                   sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam
@@ -145,7 +147,7 @@ const DesignSystem: NextPage = () => {
                   blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet,
                   consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque,
                   aliquet vel, dapibus id, mattis vel, nisi.
-                </p>
+                </Paragraph>
               </div>
             </div>
           </div>
