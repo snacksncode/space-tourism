@@ -20,17 +20,6 @@
   margin-top: var(--flow-spacing, 1rem);
 }
 
-.container,
-.container-fluid {
-  width: 100%;
-  max-width: 68.75rem; // i.e. 1110px
-  padding-inline: 2rem;
-  margin-inline: auto;
-}
-.container-fluid {
-  max-width: unset !important;
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
