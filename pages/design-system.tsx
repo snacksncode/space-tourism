@@ -17,7 +17,7 @@ const DesignSystem: NextPage = () => {
           <h1 className="fs-500 text-accent letter-spacing-lg ff-sans-cond uppercase">Design System</h1>
         </nav>
 
-        <section id="colors" className="flex" style={{ flexDirection: "column" }}>
+        <section id="colors" className="flex" style={{ marginBottom: "6rem", flexDirection: "column" }}>
           <h2 className="numbered-title">
             <span>01</span> Colors
           </h2>
@@ -30,24 +30,41 @@ const DesignSystem: NextPage = () => {
                 #0B0D17
               </div>
               <p>
-                <span className="text-accent">RGB</span> 11, 13, 23
+                <span style={{ marginRight: "3.5rem" }} className="text-accent">
+                  RGB
+                </span>{" "}
+                11, 13, 23
               </p>
               <p>
-                <span className="text-accent">HSL</span> 230°, 35%, 7%
+                <span style={{ marginRight: "3.5rem" }} className="text-accent">
+                  HSL
+                </span>{" "}
+                230°, 35%, 7%
               </p>
             </div>
             <div className="flow" style={{ flexBasis: "100%", "--flow-spacing": "0.5rem" } as any}>
               <div
                 className="bg-accent text-dark ff-serif fs-500"
-                style={{ paddingInline: "1rem", paddingBlock: "3rem 1rem", border: "1px solid white" }}
+                style={{
+                  paddingInline: "1rem",
+                  paddingBlock: "3rem 1rem",
+                  border: "1px solid white",
+                  borderColor: "hsl(var(--clr-accent))",
+                }}
               >
                 #D0D6F9
               </div>
               <p>
-                <span className="text-accent">RGB</span> 208, 214, 249
+                <span style={{ marginRight: "3.5rem" }} className="text-accent">
+                  RGB
+                </span>{" "}
+                208, 214, 249
               </p>
               <p>
-                <span className="text-accent">HSL</span> 231°, 77%, 90%
+                <span style={{ marginRight: "3.5rem" }} className="text-accent">
+                  HSL
+                </span>{" "}
+                231°, 77%, 90%
               </p>
             </div>
             <div className="flow" style={{ flexBasis: "100%", "--flow-spacing": "0.5rem" } as any}>
@@ -58,10 +75,16 @@ const DesignSystem: NextPage = () => {
                 #FFFFFF
               </div>
               <p>
-                <span className="text-accent">RGB</span> 255, 255, 255
+                <span style={{ marginRight: "3.5rem" }} className="text-accent">
+                  RGB
+                </span>{" "}
+                255, 255, 255
               </p>
               <p>
-                <span className="text-accent">HSL</span> 0°, 0%, 100%
+                <span style={{ marginRight: "3.5rem" }} className="text-accent">
+                  HSL
+                </span>{" "}
+                0°, 0%, 100%
               </p>
             </div>
           </div>
