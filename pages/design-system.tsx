@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
+import styles from "@/styles/DesignSystem.module.scss";
 
 const DesignSystem: NextPage = () => {
   return (
@@ -10,7 +12,10 @@ const DesignSystem: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container">
-        <h1>Design System</h1>
+        <nav className={styles.nav}>
+          <Image src="/assets/shared/logo.svg" width={48} height={48} alt="Logo" />
+          <h1 className="fs-500 text-accent letter-spacing-lg ff-sans-cond uppercase">Design System</h1>
+        </nav>
 
         <section id="colors" className="flex" style={{ flexDirection: "column" }}>
           <h2 className="numbered-title">
