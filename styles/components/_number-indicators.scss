@@ -2,9 +2,10 @@
   flex-direction: column;
   & > * {
     width: 5rem;
+    padding: 0;
+    aspect-ratio: 1 / 1;
     cursor: pointer;
     position: relative;
-    aspect-ratio: 1;
     font-size: 2rem;
     background-color: transparent;
     border: 1px solid hsl(var(--clr-white) / 0.25);
