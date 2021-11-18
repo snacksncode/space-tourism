@@ -6,6 +6,8 @@ import Heading from "@/components/Heading";
 import Container from "@/components/Container";
 import SubHeading from "@/components/SubHeading";
 import Paragraph from "@/components/Paragraph";
+import Navigation from "@/components/Navigation";
+import NavigationItem from "@/components/NavigationItem";
 
 const DesignSystem: NextPage = () => {
   return (
@@ -164,34 +166,17 @@ const DesignSystem: NextPage = () => {
 
           {/* navigation */}
           <div style={{ marginTop: "2rem" }}>
-            <nav style={{ backgroundColor: "rgba(255,255,255, 0.04)" }}>
-              <ul
-                className="primary-navigation ff-sans-cond flex underline-indicators"
-                style={{ justifyContent: "center" }}
-              >
-                <li className="active uppercase text-white">
-                  <a className="flex letter-spacing-md" href="#">
-                    <span>01</span>
-                    Active
-                  </a>
-                </li>
-                <li className="uppercase text-white" data-hovered>
-                  <a className="flex letter-spacing-md" href="#">
-                    <span>02</span>
-                    Hovered
-                    <div className="fake-pointer" style={{ bottom: 20, right: 5 }}>
-                      <Image src="/assets/pointer.svg" width={30} height={30} alt="fake pointer" />
-                    </div>
-                  </a>
-                </li>
-                <li className="uppercase text-white">
-                  <a className="flex letter-spacing-md" href="#">
-                    <span>03</span>
-                    Idle
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <div style={{ backgroundColor: "rgba(255,255,255, 0.04)", display: "flex", justifyContent: "center" }}>
+              <Navigation>
+                <NavigationItem active number={"01"}>
+                  Active
+                </NavigationItem>
+                <NavigationItem __fakeHover number={"02"}>
+                  Hovered
+                </NavigationItem>
+                <NavigationItem number={"03"}>Idle</NavigationItem>
+              </Navigation>
+            </div>
             <p style={{ marginTop: "1rem", textAlign: "center" }} className="text-accent ff-sans fs-400">
               Different States of Navigation Bar
             </p>
