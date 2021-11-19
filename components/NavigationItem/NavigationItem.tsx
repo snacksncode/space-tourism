@@ -14,7 +14,7 @@ const NavigationItem: FC<NavigationProps> = ({ children, number, active, __fakeH
     "fake-hover": __fakeHover != null,
   });
   return (
-    <li className={classes}>
+    <li tabIndex={0} className={classes}>
       <a className="flex letter-spacing-md">
         <span>{number}</span>
         {children}
