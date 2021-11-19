@@ -8,6 +8,9 @@ import SubHeading from "@/components/SubHeading";
 import Paragraph from "@/components/Paragraph";
 import Navigation from "@/components/Navigation";
 import NavigationItem from "@/components/NavigationItem";
+import LargeButton from "@/components/LargeButton";
+import TabList from "@/components/TabList";
+import Tab from "@/components/Tab";
 
 const DesignSystem: NextPage = () => {
   return (
@@ -186,25 +189,16 @@ const DesignSystem: NextPage = () => {
             <div className="flow" style={{ "--flow-spacing": "6rem" } as any}>
               {/* explore button */}
               <div>
-                <a href="#" className="large-button grid center uppercase ff-serif fs-600 bg-white text-dark">
-                  Explore
-                </a>
+                <LargeButton href="#">Explore</LargeButton>
                 <p style={{ marginTop: "1rem" }} className="text-accent ff-sans fs-400">
                   Landing Page Main Button - Idle
                 </p>
               </div>
 
               <div>
-                <a
-                  href="#"
-                  data-hovered
-                  className="large-button grid center uppercase ff-serif fs-600 bg-white text-dark"
-                >
+                <LargeButton href="#" __fakeHover>
                   Explore
-                  <div className="fake-pointer" style={{ bottom: 50, right: 30 }}>
-                    <Image src="/assets/pointer.svg" width={30} height={30} alt="fake pointer" />
-                  </div>
-                </a>
+                </LargeButton>
                 <p style={{ marginTop: "5rem" }} className="text-accent ff-sans fs-400">
                   Landing Page Main Button - Hover
                 </p>
@@ -214,33 +208,12 @@ const DesignSystem: NextPage = () => {
             <div className="flow" style={{ "--flow-spacing": "6rem" } as any}>
               {/* Tabs */}
               <div className="flex" style={{ flexDirection: "column" }}>
-                <div role="tablist" className="tab-list flex underline-indicators" style={{ justifyContent: "center" }}>
-                  <button
-                    role="tab"
-                    aria-selected="true"
-                    className="uppercase text-accent letter-spacing-md ff-sans-cond"
-                  >
-                    Moon
-                  </button>
-                  <button
-                    role="tab"
-                    aria-selected="false"
-                    data-hovered
-                    className="uppercase text-accent letter-spacing-md ff-sans-cond"
-                  >
-                    Mars
-                    <div className="fake-pointer">
-                      <Image src="/assets/pointer.svg" width={30} height={30} alt="fake pointer" />
-                    </div>
-                  </button>
-                  <button
-                    role="tab"
-                    aria-selected="false"
-                    className="uppercase text-accent letter-spacing-md ff-sans-cond"
-                  >
-                    Europa
-                  </button>
-                </div>
+                <TabList style={{ justifyContent: "center" }}>
+                  <Tab active>Moon</Tab>
+                  <Tab __fakeHover>Mars</Tab>
+                  <Tab>Europa</Tab>
+                </TabList>
+
                 <p style={{ textAlign: "center" }} className="text-accent ff-sans fs-400">
                   Tabs (Active, Hover, & Idle)
                 </p>
@@ -248,20 +221,15 @@ const DesignSystem: NextPage = () => {
 
               {/* Dots */}
               <div className="flex" style={{ flexDirection: "column" }}>
-                <div role="tablist" className="dot-indicators flex" style={{ justifyContent: "center" }}>
-                  <button role="tab" aria-selected="true">
-                    <span className="sr-only">Slide title</span>
-                  </button>
-                  <button role="tab" data-hovered aria-selected="false">
-                    <span className="sr-only">Slide title</span>
-                    <div className="fake-pointer" style={{ bottom: -15, right: -15 }}>
-                      <Image src="/assets/pointer.svg" width={30} height={30} alt="fake pointer" />
-                    </div>
-                  </button>
-                  <button role="tab" aria-selected="false">
-                    <span className="sr-only">Slide title</span>
-                  </button>
-                </div>
+                <TabList mode="dots" style={{ justifyContent: "center" }}>
+                  <Tab mode="dot" active>
+                    Moon
+                  </Tab>
+                  <Tab mode="dot" __fakeHover>
+                    Mars
+                  </Tab>
+                  <Tab mode="dot">Europa</Tab>
+                </TabList>
                 <p style={{ textAlign: "center" }} className="text-accent ff-sans fs-400">
                   Slider 1 States (Active, Hover, & Idle)
                 </p>
@@ -269,20 +237,16 @@ const DesignSystem: NextPage = () => {
 
               {/* Numbers */}
               <div className="flex" style={{ flexDirection: "column" }}>
-                <div role="tablist" className="number-indicators ff-serif flex" style={{ alignItems: "center" }}>
-                  <button role="tab" aria-selected="true">
+                <TabList mode="numbers" style={{ alignItems: "center" }}>
+                  <Tab active mode="number">
                     1
-                  </button>
-                  <button role="tab" data-hovered aria-selected="false">
+                  </Tab>
+                  <Tab __fakeHover mode="number">
                     2
-                    <div className="fake-pointer" style={{ bottom: 0, right: 0 }}>
-                      <Image src="/assets/pointer.svg" width={30} height={30} alt="fake pointer" />
-                    </div>
-                  </button>
-                  <button role="tab" aria-selected="false">
-                    3
-                  </button>
-                </div>
+                  </Tab>
+                  <Tab mode="number">3</Tab>
+                </TabList>
+
                 <p style={{ textAlign: "center" }} className="text-accent ff-sans fs-400">
                   Slider 2 States (Active, Hover, & Idle)
                 </p>
