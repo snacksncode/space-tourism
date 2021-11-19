@@ -1,4 +1,4 @@
-.large-button {
+.wrapper {
   position: relative;
   padding-inline: 2em;
   border-radius: 50%;
@@ -21,7 +21,7 @@
   }
   &:hover::after,
   &:focus-visible::after,
-  &[data-hovered]::after {
+  &.fake-hover::after {
     opacity: 1;
     transform: scale(1.5);
   }

@@ -1,0 +1,14 @@
+.wrapper {
+  &:not(.dot) {
+    background-color: transparent;
+  }
+  &:not(.number) {
+    border: none;
+  }
+  .number {
+    text-align: center;
+  }
+  &[aria-selected="true"] {
+    color: hsl(var(--clr-white));
+  }
+}

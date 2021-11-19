@@ -9,8 +9,8 @@
     border-radius: 50%;
     border: none;
     &:hover,
-    &[data-hovered],
-    &:focus-visible {
+    &:focus-visible,
+    &.fake-hover {
       background-color: hsl(var(--clr-white) / 0.5);
     }
     &[aria-selected="true"] {
