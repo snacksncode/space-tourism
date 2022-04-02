@@ -1,9 +1,26 @@
+.wrapper {
+  max-width: 68.75rem; // i.e. 1110px
+}
+.wrapper,
+.wrapper--fluid,
+.wrapper--grid {
+  width: 100%;
+  position: relative;
+}
 .wrapper,
 .wrapper--fluid {
-  width: 100%;
   padding-inline: 2rem;
   margin-inline: auto;
 }
-.wrapper {
-  max-width: 68.75rem; // i.e. 1110px
+.wrapper--grid {
+  display: grid;
+  gap: 2rem;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 58rem) {
+  .wrapper--grid {
+    padding-inline: 0;
+    grid-template-columns: minmax(0, 1fr) minmax(auto, 32.625rem) minmax(min-content, 32.625rem) minmax(0, 1fr) !important;
+  }
 }

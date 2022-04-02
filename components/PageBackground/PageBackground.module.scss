@@ -1,0 +1,35 @@
+.wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: -99;
+}
+.wrapper {
+  &--sm {
+    display: block;
+  }
+  &--md,
+  &--lg {
+    display: none;
+  }
+}
+
+@media (min-width: 35rem) {
+  .wrapper {
+    &--sm {
+      display: none;
+    }
+    &--md {
+      display: block;
+    }
+  }
+}
+@media (min-width: 58rem) {
+  .wrapper {
+    &--md {
+      display: none;
+    }
+    &--lg {
+      display: block;
+    }
+  }
+}

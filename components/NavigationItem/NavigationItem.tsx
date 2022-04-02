@@ -1,29 +1,36 @@
 import classNames from "classnames";
-import Image from "next/image";
 import { FC } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import styles from "./NavigationItem.module.scss";
 
 interface NavigationProps {
-  number: string;
+  href: string;
   active?: boolean;
+  number: number;
   __fakeHover?: boolean;
 }
 
-const NavigationItem: FC<NavigationProps> = ({ children, number, active, __fakeHover }) => {
+const NavigationItem: FC<NavigationProps> = ({ children, active, number, href, __fakeHover }) => {
   const classes = classNames("uppercase", "text-white", {
-    active: active != null,
+    active: active === true,
     "fake-hover": __fakeHover != null,
   });
   return (
-    <li tabIndex={0} className={classes}>
-      <a className="flex letter-spacing-md">
-        <span>{number}</span>
-        {children}
-        {__fakeHover != null && (
-          <div className="fake-pointer" style={{ bottom: 20, right: 5 }}>
-            <Image src="/assets/pointer.svg" width={30} height={30} alt="fake pointer" />
-          </div>
-        )}
-      </a>
+    <li className={classes}>
+      <Link href={href}>
+        <a tabIndex={0} className="flex letter-spacing-md">
+          <span className={styles.number}>{String("0" + number.toString()).slice(-2)}</span>
+          {children}
+          {active === true && <motion.span className="indicator" layout layoutId="header-navlink-underline" />}
+          {__fakeHover != null && (
+            <div className="fake-pointer" style={{ bottom: 20, right: 5 }}>
+              <Image src="/assets/pointer.svg" width={30} height={30} alt="fake pointer" />
+            </div>
+          )}
+        </a>
+      </Link>
     </li>
   );
 };

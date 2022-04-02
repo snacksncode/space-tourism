@@ -13,11 +13,18 @@ body {
   font-size: var(--fs-400);
   background-color: hsl(var(--clr-dark));
   color: hsl(var(--clr-white));
+  overflow-x: hidden;
+}
+
+#__next {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  position: relative;
 }
 
 *:focus-visible {
-  outline: 2px dashed hsl(var(--clr-accent));
-  outline-offset: 1rem;
+  outline: 3px dashed hsl(var(--clr-accent));
+  outline-offset: 1.25em;
 }
 
 .fake-pointer {

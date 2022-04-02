@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "@/styles/DesignSystem.module.scss";
 import Heading from "@/components/Heading";
 import Container from "@/components/Container";
@@ -11,6 +10,7 @@ import NavigationItem from "@/components/NavigationItem";
 import LargeButton from "@/components/LargeButton";
 import TabList from "@/components/TabList";
 import Tab from "@/components/Tab";
+import Logo from "@/components/Logo";
 
 const DesignSystem: NextPage = () => {
   return (
@@ -22,7 +22,7 @@ const DesignSystem: NextPage = () => {
       </Head>
       <Container>
         <nav className={styles.nav}>
-          <Image src="/assets/shared/logo.svg" width={48} height={48} alt="Logo" />
+          <Logo />
           <h1 className="fs-500 text-accent letter-spacing-lg ff-sans-cond uppercase">Design System</h1>
         </nav>
 
@@ -171,13 +171,15 @@ const DesignSystem: NextPage = () => {
           <div style={{ marginTop: "2rem" }}>
             <div style={{ backgroundColor: "rgba(255,255,255, 0.04)", display: "flex", justifyContent: "center" }}>
               <Navigation>
-                <NavigationItem active number={"01"}>
+                <NavigationItem href="#" active number={1}>
                   Active
                 </NavigationItem>
-                <NavigationItem __fakeHover number={"02"}>
+                <NavigationItem href="#" __fakeHover number={2}>
                   Hovered
                 </NavigationItem>
-                <NavigationItem number={"03"}>Idle</NavigationItem>
+                <NavigationItem href="#" number={3}>
+                  Idle
+                </NavigationItem>
               </Navigation>
             </div>
             <p style={{ marginTop: "1rem", textAlign: "center" }} className="text-accent ff-sans fs-400">

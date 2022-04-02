@@ -1,0 +1,16 @@
+.number {
+  display: inline-block;
+  font-weight: 700;
+}
+
+@media (min-width: 35rem) {
+  .number {
+    display: none;
+  }
+}
+
+@media (min-width: 58rem) {
+  .number {
+    display: inline-block;
+  }
+}

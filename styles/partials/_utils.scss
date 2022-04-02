@@ -2,10 +2,6 @@
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
-  &.center {
-    align-items: center;
-    justify-content: center;
-  }
 }
 
 .grid {
@@ -13,6 +9,19 @@
   gap: var(--gap, 1rem);
   &.center {
     place-items: center;
+  }
+}
+
+.inline-grid {
+  display: inline-grid;
+}
+
+.flex,
+.grid,
+.inline-grid {
+  &.center {
+    align-items: center;
+    justify-content: center;
   }
 }
 

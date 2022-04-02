@@ -10,7 +10,7 @@ interface Props {
 }
 
 const LargeButton: FC<Props> = ({ children: text, __fakeHover, href }) => {
-  const linkClasses = classNames(styles.wrapper, "grid center uppercase ff-serif fs-600 bg-white text-dark", {
+  const linkClasses = classNames(styles.wrapper, "inline-grid center uppercase ff-serif fs-600 bg-white text-dark", {
     [styles["fake-hover"]]: __fakeHover,
   });
   return (

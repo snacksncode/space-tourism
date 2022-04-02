@@ -1,0 +1,10 @@
+@media (min-width: 58rem) {
+  .wrapper {
+    &--left {
+      grid-column: 2 / span 1;
+    }
+    &--right {
+      grid-column: 3 / span 1;
+    }
+  }
+}
