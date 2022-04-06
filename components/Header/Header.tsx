@@ -1,18 +1,14 @@
+import { AnimateSharedLayout } from "framer-motion";
 import { FC } from "react";
 import Container from "../Container";
 import Logo from "../Logo";
 import Navigation from "../Navigation";
 import NavigationItem from "../NavigationItem";
 import styles from "./Header.module.scss";
-import { AnimateSharedLayout } from "framer-motion";
 
 interface NavData {
   text: string;
   href: string;
-}
-
-interface Props {
-  activeIndex: number;
 }
 
 const navigationData: NavData[] = [
@@ -34,26 +30,23 @@ const navigationData: NavData[] = [
   },
 ];
 
-const Header: FC<Props> = ({ activeIndex }) => {
+const Header: FC = () => {
   return (
-    <Container type="grid" component="header" className={styles.wrapper}>
-      <Logo className={styles.logo} />
-      <div className={styles.line} />
-      <Navigation>
-        {navigationData.map((navItem, navItemIdx) => {
-          return (
-            <NavigationItem
-              key={navItemIdx}
-              active={navItemIdx === activeIndex}
-              href={navItem.href}
-              number={navItemIdx + 1}
-            >
-              {navItem.text}
-            </NavigationItem>
-          );
-        })}
-      </Navigation>
-    </Container>
+    <AnimateSharedLayout>
+      <Container type="grid" component="header" className={styles.wrapper}>
+        <Logo className={styles.logo} />
+        <div className={styles.line} />
+        <Navigation>
+          {navigationData.map((navItem, navItemIdx) => {
+            return (
+              <NavigationItem key={navItemIdx} href={navItem.href} position={navItemIdx + 1}>
+                {navItem.text}
+              </NavigationItem>
+            );
+          })}
+        </Navigation>
+      </Container>
+    </AnimateSharedLayout>
   );
 };
 

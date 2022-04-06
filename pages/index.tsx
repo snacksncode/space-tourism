@@ -2,13 +2,16 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Container from "@/components/Container";
 import Heading from "@/components/Heading";
-import Header from "@/components/Header";
 import Paragraph from "@/components/Paragraph";
 import LargeButton from "@/components/LargeButton";
 import styles from "@/styles/Home.module.scss";
 import Column from "@/components/Column";
 import PageBackground from "@/components/PageBackground";
-import { AnimateSharedLayout } from "framer-motion";
+
+// Static Background Import
+import smallBackground from "../public/assets/home/background-home-mobile.jpg";
+import mediumBackground from "../public/assets/home/background-home-tablet.jpg";
+import bigBackground from "../public/assets/home/background-home-desktop.jpg";
 
 const Home: NextPage = () => {
   return (
@@ -20,12 +23,11 @@ const Home: NextPage = () => {
       </Head>
       <PageBackground
         images={{
-          sm: "/assets/home/background-home-mobile.jpg",
-          md: "/assets/home/background-home-tablet.jpg",
-          lg: "/assets/home/background-home-desktop.jpg",
+          sm: smallBackground,
+          md: mediumBackground,
+          lg: bigBackground,
         }}
       />
-      <Header activeIndex={0} />
       <Container className={styles.container} type="grid">
         <Column className={styles.left} position="left">
           <Heading className={styles.heading} level={1} forceStyleLevel={5}>

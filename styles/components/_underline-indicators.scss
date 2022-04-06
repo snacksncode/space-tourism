@@ -4,10 +4,19 @@
     cursor: pointer;
     padding-block: var(--underline-gap, 1rem);
 
+    &::after {
+      content: "";
+    }
     &:not(.active)::after
     // &:not([aria-selected="true"])::after
     {
-      content: "";
+      opacity: 0;
+    }
+    &.active:hover,
+    &.active:focus-within {
+      &::after {
+        opacity: 0;
+      }
     }
 
     .indicator,
@@ -22,8 +31,7 @@
       opacity: 0;
     }
     &:hover,
-    &:focus-within,
-    &.fake-hover {
+    &:focus-within {
       &::after {
         opacity: 0.5;
       }

@@ -13,8 +13,7 @@
     transition: border-color 200ms ease, background-color 200ms ease;
     border-radius: 50%;
     &:hover,
-    &:focus-visible,
-    &.fake-hover {
+    &:focus-visible {
       border-color: hsl(var(--clr-white));
     }
     &[aria-selected="true"] {

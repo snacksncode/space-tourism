@@ -20,8 +20,7 @@
     transition: opacity 500ms ease, transform 800ms ease;
   }
   &:hover::after,
-  &:focus-visible::after,
-  &.fake-hover::after {
+  &:focus-visible::after {
     opacity: 1;
     transform: scale(1.5);
   }

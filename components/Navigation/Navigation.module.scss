@@ -1,5 +1,8 @@
 .wrapper {
   font-size: var(--fs-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .inner {
     position: absolute;
     top: 0;
@@ -25,6 +28,14 @@
   .menu-toggle {
     z-index: 2;
     position: relative;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 0.5rem;
+    outline-offset: 0.25rem;
+    cursor: pointer;
   }
   a {
     --gap: 0.5rem;
@@ -53,6 +64,7 @@
       top: unset;
       display: flex;
       flex-direction: row;
+      justify-content: flex-end;
       padding: 0;
       min-height: unset;
       right: unset;

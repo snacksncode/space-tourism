@@ -171,13 +171,13 @@ const DesignSystem: NextPage = () => {
           <div style={{ marginTop: "2rem" }}>
             <div style={{ backgroundColor: "rgba(255,255,255, 0.04)", display: "flex", justifyContent: "center" }}>
               <Navigation>
-                <NavigationItem href="#" active number={1}>
+                <NavigationItem href="#" position={1}>
                   Active
                 </NavigationItem>
-                <NavigationItem href="#" __fakeHover number={2}>
+                <NavigationItem href="#" position={2}>
                   Hovered
                 </NavigationItem>
-                <NavigationItem href="#" number={3}>
+                <NavigationItem href="#" position={3}>
                   Idle
                 </NavigationItem>
               </Navigation>
@@ -198,9 +198,7 @@ const DesignSystem: NextPage = () => {
               </div>
 
               <div>
-                <LargeButton href="#" __fakeHover>
-                  Explore
-                </LargeButton>
+                <LargeButton href="#">Explore</LargeButton>
                 <p style={{ marginTop: "5rem" }} className="text-accent ff-sans fs-400">
                   Landing Page Main Button - Hover
                 </p>
@@ -212,7 +210,7 @@ const DesignSystem: NextPage = () => {
               <div className="flex" style={{ flexDirection: "column" }}>
                 <TabList style={{ justifyContent: "center" }}>
                   <Tab active>Moon</Tab>
-                  <Tab __fakeHover>Mars</Tab>
+                  <Tab>Mars</Tab>
                   <Tab>Europa</Tab>
                 </TabList>
 
@@ -227,9 +225,7 @@ const DesignSystem: NextPage = () => {
                   <Tab mode="dot" active>
                     Moon
                   </Tab>
-                  <Tab mode="dot" __fakeHover>
-                    Mars
-                  </Tab>
+                  <Tab mode="dot">Mars</Tab>
                   <Tab mode="dot">Europa</Tab>
                 </TabList>
                 <p style={{ textAlign: "center" }} className="text-accent ff-sans fs-400">
@@ -243,9 +239,7 @@ const DesignSystem: NextPage = () => {
                   <Tab active mode="number">
                     1
                   </Tab>
-                  <Tab __fakeHover mode="number">
-                    2
-                  </Tab>
+                  <Tab mode="number">2</Tab>
                   <Tab mode="number">3</Tab>
                 </TabList>
 

@@ -3,6 +3,7 @@ import styles from "./Logo.module.scss";
 import Link from "next/link";
 import { FC } from "react";
 import classNames from "classnames";
+import logoSrc from "../../public/assets/shared/logo.svg";
 
 interface Props {
   className?: string;
@@ -15,7 +16,7 @@ const Logo: FC<Props> = ({ className }) => {
   return (
     <Link href="/">
       <a className={classes}>
-        <Image src="/assets/shared/logo.svg" loading="eager" width={48} height={48} alt="Logo" />
+        <Image src={logoSrc} priority width={48} height={48} alt="" />
       </a>
     </Link>
   );
